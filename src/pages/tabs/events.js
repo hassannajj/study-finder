@@ -1,21 +1,21 @@
 import Head from "next/head";
 import {
-  Container,
-  Heading,
-  Link,
-  ListItem,
-  UnorderedList,
-  Card, 
-  Text,
-  CardHeader, 
-  CardBody, 
-  CardFooter
-} from "@chakra-ui/react";
+    Container,
+    Heading,
+    Link,
+    ListItem,
+    UnorderedList,
+    Card,
+    Text,
+    CardHeader,
+    CardBody,
+    CardFooter
+} from "@/chakra-ui/react";
 // import { PrismaClient } from "@prisma/client";
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-export default function DisplayEvents({eventMap}) {
+export default function DisplayEvents({ eventMap }) {
     return (
         <Container>
             <Head>
@@ -31,7 +31,7 @@ export default function DisplayEvents({eventMap}) {
                                 <Card>
                                     <CardBody>
                                         <Text>{event.name}</Text>
-                                            <Text>Start Date/Time: {event.startDate}</Text>
+                                        <Text>Start Date/Time: {event.startDate}</Text>
                                         <Text>End Date/Time: {event.endDate}</Text>
                                     </CardBody>
                                 </Card>
@@ -47,10 +47,10 @@ export default function DisplayEvents({eventMap}) {
 
 
 
-export async function getServerSideProps(){
+export async function getServerSideProps() {
     const eventMap = await prisma.event.findMany({
-        select : { name : true, startDate : true, endDate : true }
+        select: { name: true, startDate: true, endDate: true }
     });
 
-    return {props: {eventMap: JSON.parse(JSON.stringify(eventMap))}};
+    return { props: { eventMap: JSON.parse(JSON.stringify(eventMap)) } };
 }

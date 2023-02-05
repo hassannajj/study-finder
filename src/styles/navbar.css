@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Varela+Round&display=swap');
+
+.navbar {
+    background-color: #3c3c3c;
+}
+
+.navbar-brand {
+    color: #1ADBE5;
+    font-family: Lobster;
+    font-size: xx-large;
+}
+
+.zeroBottomPadding {
+    padding-bottom: 0%;
+}

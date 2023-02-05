@@ -4,11 +4,11 @@ import Link from 'next/link';
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 
-function leftSide() {
+function LeftSide() {
     console.log("hi")
     return (
         <>
-
+            hello
             <img
                 src="https://cdn.discordapp.com/attachments/1071663751637504001/1071663919531302944/profile-default.png"
                 width="250"
@@ -18,7 +18,6 @@ function leftSide() {
     )
 }
 
-
 export default function Profile() {
     console.log("hi2")
 
@@ -26,7 +25,7 @@ export default function Profile() {
         <>
 
             <Navbar></Navbar>
-            <leftSide></leftSide>
+            <LeftSide></LeftSide>
             <h1>Profile</h1>
         </>
     )

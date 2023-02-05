@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import { useRouter } from 'next/router';
+
 
 function IconAndTitle(prop) {
     return (
@@ -15,6 +17,8 @@ function IconAndTitle(prop) {
     )
 }
 function Navbar() {
+    const router = useRouter();
+    var username = router.query.user
     return (
 
         <>
@@ -37,11 +41,11 @@ function Navbar() {
                         <ul class="navbar-nav ml-auto">
 
                             <li class="nav-link zeroBottomPadding">
-                                <IconAndTitle icon="bi bi-people-fill" text="Events" link="\tabs\events"></IconAndTitle>
+                                <IconAndTitle icon="bi bi-people-fill" text="Events" link={"\tabs\events?user=" + username}></IconAndTitle>
                             </li>
 
                             <li class="nav-link zeroBottomPadding">
-                                <IconAndTitle icon="bi bi-emoji-sunglasses" text="Profile" link="\tabs\profile"></IconAndTitle>
+                                <IconAndTitle icon="bi bi-emoji-sunglasses" text="Profile" link={"/tabs/profile?user=" + username}></IconAndTitle>
                             </li>
 
                             <li class="nav-link zeroBottomPadding">

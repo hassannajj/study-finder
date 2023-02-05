@@ -1,13 +1,16 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Navbar from '@/components/navbar';
 
 
 
 export default function Login() {
+
     const router = useRouter();
     const { err } = router.query;
     return (
         <>
+            <Navbar></Navbar>
             <form action="/api/login" method="post">
                 <label for="username">Username:</label>
                 <input

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Navbar from '@/components/navbar';
 
 
 export default function Login() {
@@ -7,6 +8,8 @@ export default function Login() {
     const { err } = router.query;
     return (
         <>
+            <Navbar></Navbar>
+
             <form action="/api/signup" method="post">
                 <label for="username">Username:</label>
                 <input

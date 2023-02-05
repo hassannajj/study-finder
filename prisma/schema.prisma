@@ -27,7 +27,7 @@ model User {
 
 model Event {
   id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  name      String?
+  name      String // unquestion marked the '?'
   startDate DateTime @db.Timestamptz(6)
   endDate   DateTime @db.Timestamptz(6)
   ownerId   String   @db.Uuid

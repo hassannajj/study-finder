@@ -8,7 +8,6 @@ function LeftSide() {
     console.log("hi")
     return (
         <>
-            hello
             <img
                 src="https://cdn.discordapp.com/attachments/1071663751637504001/1071663919531302944/profile-default.png"
                 width="250"

@@ -25,7 +25,7 @@ export default async function handler(req, res) {
             },
         })
 
-        res.redirect('/tabs/profile') // '/' redirect to URL path
+        res.redirect('/tabs/profile?user=' + user.username) // '/' redirect to URL path
     }
 
 }

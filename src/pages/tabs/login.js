@@ -2,8 +2,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import BasicNavbar from '@/components/basicNavBar';
 
-
-
 export default function Login() {
 
     const router = useRouter();
@@ -11,31 +9,33 @@ export default function Login() {
     return (
         <>
             <BasicNavbar></BasicNavbar>
-            <form action="/api/login" method="post">
-                <label for="username">Username:</label>
-                <input
-                    type='text'
-                    id='username'
-                    name='username'
-                    placeholder='username'
-                    required />
+            <div class="form">
+                <form action="/api/login" method="post">
+                    <label for="username">Login</label>
+                    <input
+                        type='text'
+                        id='username'
+                        name='username'
+                        placeholder='username'
+                        required />
 
-                <label for="password">Password:</label>
-                <input
-                    type='password'
-                    id='password'
-                    name='password'
-                    placeholder='password'
-                    required
-                    minlength="10"
-                    maxlength="20" />
+                    <label for="password"></label>
+                    <input
+                        type='password'
+                        id='password'
+                        name='password'
+                        placeholder='password'
+                        required
+                        minlength="10"
+                        maxlength="20" />
 
-                <button type="submit"> Sign In</button>
-            </form>
-            <Link
-                href='/tabs/signup'>Sign up</Link>
-            {err ? (<div>{err}</div>) : null}
+                    <button type="submit"> Sign In</button>
+                </form>
+                <Link
+                    href='/tabs/signup'>Sign up</Link>
+                {err ? (<div>{err}</div>) : null}
 
+            </div>
         </>
     )
 }

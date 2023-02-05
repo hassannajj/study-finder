@@ -1,5 +1,11 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import {
+    createBrowserRouter,
+    Router,
+    RouterProvider,
+    useLocation,
+} from "react-router-dom";
 
 function IconAndTitle(prop) {
     return (
@@ -14,7 +20,8 @@ function IconAndTitle(prop) {
         </>
     )
 }
-function Navbar() {
+function Navbar(prop) {
+
     return (
 
         <>
@@ -37,15 +44,15 @@ function Navbar() {
                         <ul class="navbar-nav ml-auto">
 
                             <li class="nav-link zeroBottomPadding">
-                                <IconAndTitle icon="bi bi-people-fill" text="Events" link="\tabs\events"></IconAndTitle>
+                                <IconAndTitle icon="bi bi-people-fill" text="Events" link="/tabs/events"></IconAndTitle>
                             </li>
 
                             <li class="nav-link zeroBottomPadding">
-                                <IconAndTitle icon="bi bi-emoji-sunglasses" text="Profile" link="\tabs\profile"></IconAndTitle>
+                                <IconAndTitle icon="bi bi-emoji-sunglasses" text="Profile" link="/tabs/profile"></IconAndTitle>
                             </li>
 
                             <li class="nav-link zeroBottomPadding">
-                                <IconAndTitle icon="bi bi-arrow-bar-right" text="Sign Out" link="\tabs\login"></IconAndTitle>
+                                <IconAndTitle icon="bi bi-arrow-bar-right" text="Sign Out" link="/tabs/login"></IconAndTitle>
                             </li>
 
                         </ul>

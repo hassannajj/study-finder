@@ -13,3 +13,7 @@
 .zeroBottomPadding {
     padding-bottom: 0%;
 }
+
+.navlink {
+    float: right;
+}

@@ -22,7 +22,7 @@ export default function Profile() {
 
     return (
         <>
-
+            <Head><title>Profile</title></Head>
             <Navbar></Navbar>
             <LeftSide></LeftSide>
             <h1>Profile</h1>

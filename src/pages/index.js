@@ -2,10 +2,10 @@ import Head from 'next/head'
 import Link from 'next/link';
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
+import Login from './tabs/login';
 import NavBar from '@/components/navbar';
 
-
-export default function Login() {
+export default function Home() {
   return (
     <>
       <Head>
@@ -15,14 +15,14 @@ export default function Login() {
       </Head>
 
       <NavBar></NavBar>
-      <h1>
-        <Link href="/tabs/profile">
-          Login
-        </Link>
-      </h1 >
+
+      <Login></Login>
+
     </>
   )
+
 }
+
 
 // export default function Home() {
 //   return (

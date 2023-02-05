@@ -2,13 +2,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 
-
 export default function Login() {
     const router = useRouter();
     const { err } = router.query;
     return (
         <>
-            <form action="/api/login" method="post">
+            <form action="/api/signup" method="post">
                 <label for="username">Username:</label>
                 <input
                     type='text'
@@ -27,12 +26,11 @@ export default function Login() {
                     minlength="10"
                     maxlength="20" />
 
-                <button type="submit"> Sign In</button>
+                <button type="submit"> Sign up</button>
             </form>
             <Link
-                href='/tabs/signup'>Sign up</Link>
+                href='/tabs/login'>Log in</Link>
             {err ? (<div>{err}</div>) : null}
-
         </>
     )
 }
